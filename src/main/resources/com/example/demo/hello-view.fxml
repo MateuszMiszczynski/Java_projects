@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="864.0" prefWidth="1334.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <BorderPane prefHeight="837.0" prefWidth="1145.0">
+        <top>
+            <HBox prefHeight="14.0" prefWidth="1104.0" BorderPane.alignment="CENTER">
+                <children>
+                      <Label prefHeight="65.0" prefWidth="110.0" text="Samochód :">
+                          <font>
+                              <Font size="19.0" />
+                          </font>
+                          <padding>
+                              <Insets bottom="11.0" />
+                          </padding>
+                      </Label>
+                    <Label contentDisplay="CENTER" prefHeight="107.0" prefWidth="179.0">
+                        <font>
+                            <Font size="32.0" />
+                        </font>
+                    </Label>
+                    <VBox prefHeight="200.0" prefWidth="100.0" />
+                    <VBox prefHeight="100.0" prefWidth="136.0">
+                        <children>
+                            <Label prefHeight="36.0" prefWidth="91.0" />
+                        </children>
+                    </VBox>
+                    <Label prefHeight="47.0" prefWidth="192.0" text="Wybierz samochód :">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <VBox prefHeight="14.0" prefWidth="156.0">
+                        <children>
+                            <Label prefHeight="29.0" prefWidth="152.0" />
+                            <ComboBox fx:id="samochodComboBox" prefHeight="25.0" prefWidth="162.0" />
+                        </children></VBox>
+                    <VBox prefHeight="100.0" prefWidth="279.0">
+                        <children>
+                            <Label prefHeight="28.0" prefWidth="101.0" />
+                            <HBox prefHeight="30.0" prefWidth="219.0">
+                                <children>
+
+                                    <Label prefHeight="26.0" prefWidth="11.0" />
+                                    <Button fx:id="DodajNowySamochodButton" mnemonicParsing="false" onAction="#onDodajSamochód" prefHeight="25.0" prefWidth="106.0" text="Dodaj Nowy" />
+                                    <Button fx:id="UsunSamochodButton" mnemonicParsing="false" onAction="#onUsun" prefHeight="24.0" prefWidth="63.0" text="Usuń" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+
+        </top>
+        <left>
+            <SplitPane orientation="VERTICAL" prefHeight="663.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+                <items>
+                    <Pane prefHeight="471.0" prefWidth="352.0">
+                        <children>
+                            <Label layoutX="14.0" layoutY="45.0">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="24.0" layoutY="30.0" prefHeight="32.0" prefWidth="171.0" text="Numer Rejestracyjny :">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                                <padding>
+                                    <Insets bottom="11.0" />
+                                </padding>
+                            </Label>
+                            <Label layoutX="29.0" layoutY="59.0" prefHeight="35.0" prefWidth="109.0" text="Prędkość :">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                                <padding>
+                                    <Insets bottom="10.0" />
+                                </padding>
+                            </Label>
+                            <TextField fx:id="nazwasamochoduTextField" editable="false" layoutX="175.0" layoutY="2.0" prefHeight="10.0" prefWidth="150.0" />
+                            <TextField fx:id="nrrejestracyjnyTextField" editable="false" layoutX="175.0" layoutY="33.0" prefHeight="9.0" prefWidth="150.0" />
+                            <TextField fx:id="predkoscTextField" editable="false" layoutX="175.0" layoutY="64.0" prefHeight="25.0" prefWidth="150.0" />
+                            <Pane layoutX="101.0" layoutY="55.0" prefHeight="191.0" prefWidth="156.0">
+                        <children>
+                                    <Label alignment="CENTER" layoutX="-7.0" layoutY="42.0" prefHeight="45.0" prefWidth="146.0" text="Aktualna Pozycja :">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                  <Label layoutX="74.0" layoutY="75.0" prefHeight="23.0" prefWidth="23.0" text="Y :" />
+                        </children>
+                            </Pane>
+                            <TextField fx:id="aktualnapozycjayTextField" editable="false" layoutX="195.0" layoutY="129.0" prefHeight="28.0" prefWidth="151.0" />
+                            <Label layoutX="5.0" layoutY="128.0" prefHeight="30.0" prefWidth="19.0" text="X :" />
+                            <Label alignment="CENTER" layoutX="100.0" layoutY="129.0" prefHeight="73.0" prefWidth="133.0" text="Aktualny cel :">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="jedzdoxTextField" editable="false" layoutX="25.0" layoutY="177.0" prefHeight="23.0" prefWidth="131.0" />
+                            <TextField fx:id="jedzdoyTextField" editable="false" layoutX="196.0" layoutY="175.0" />
+                            <Label layoutX="4.0" layoutY="179.0" prefHeight="17.0" prefWidth="21.0" text="X :" />
+                            <Label layoutX="176.0" layoutY="181.0" prefHeight="17.0" prefWidth="23.0" text="Y :" />
+                            <Button fx:id="uruchomButton" layoutX="2.0" layoutY="209.0" mnemonicParsing="false" onAction="#onWlacz" prefHeight="31.0" prefWidth="164.0" text="Włącz">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="wylaczButton" layoutX="181.0" layoutY="209.0" mnemonicParsing="false" onAction="#onWylacz" prefHeight="31.0" prefWidth="164.0" text="Wyłącz">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Button>
+                            <Pane layoutX="8.0" layoutY="260.0" prefHeight="188.0" prefWidth="343.0">
+                                <children>
+                                    <Label layoutX="17.0" layoutY="7.0" prefHeight="41.0" prefWidth="160.0" text="Aktualny bieg :">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="43.0" prefHeight="32.0" prefWidth="56.0" text="Nazwa :">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <padding>
+                                            <Insets bottom="11.0" />
+                                        </padding>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="72.0" prefHeight="32.0" prefWidth="58.0" text="Cena :">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <padding>
+                                            <Insets bottom="11.0" />
+                                        </padding>
+                                    </Label>
+                                    <Label layoutX="23.0" layoutY="104.0" prefHeight="32.0" prefWidth="53.0" text="Waga :">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <padding>
+                                            <Insets bottom="11.0" />
+                                        </padding>
+                                    </Label>
+                                    <TextField fx:id="nazwaskrzyniTextField" editable="false" layoutX="143.0" layoutY="47.0" prefHeight="25.0" prefWidth="148.0" />
+                                    <TextField fx:id="cenaskrzyniTextField" editable="false" layoutX="143.0" layoutY="76.0" prefHeight="25.0" prefWidth="148.0" />
+                                    <TextField fx:id="wagaskrzyniTextField" editable="false" layoutX="144.0" layoutY="108.0" prefHeight="25.0" prefWidth="147.0" />
+                                    <Button fx:id="downshiftbutton" layoutX="172.0" layoutY="140.0" mnemonicParsing="false" onAction="#onZmniejszBieg" prefHeight="31.0" prefWidth="130.0" text="Zmniejsz Bieg">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="upshiftbutton" layoutX="9.0" layoutY="140.0" mnemonicParsing="false" onAction="#onZwiększBieg" prefHeight="25.0" prefWidth="145.0" text="Zwiększ Bieg">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Button>
+                                    <TextField fx:id="aktualnyBiegTextField" editable="false" layoutX="143.0" layoutY="15.0" prefHeight="25.0" prefWidth="148.0" />
+                                </children>
+                            </Pane>
+                            <Pane layoutX="-1.0" layoutY="447.0" prefHeight="90.0" prefWidth="354.0">
+                                <children>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="91.0" text="Sprzęgło :">
+                                        <font>
+                                            <Font size="19.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="52.0" prefHeight="21.0" prefWidth="50.0" text="Masa :">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="masasprzeglaTextField" editable="false" layoutX="82.0" layoutY="50.0" prefHeight="25.0" prefWidth="151.0" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="29.0" layoutY="-4.0" prefHeight="36.0" prefWidth="80.0" text="Model :">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="aktualnapozycjaxTextField" editable="false" layoutX="24.0" layoutY="133.0" prefHeight="23.0" prefWidth="133.0" />
+                     <Label layoutX="9.0" layoutY="240.0" prefHeight="40.0" prefWidth="149.0" text="Skrzynia biegów :">
+                         <font>
+                             <Font size="19.0" />
+                         </font>
+                     </Label>
+                          <Pane layoutX="-1.0" layoutY="556.0" prefHeight="131.0" prefWidth="409.0">
+                              <children>
+                                  <Label layoutX="8.0" layoutY="-4.0" prefHeight="48.0" prefWidth="72.0" text="Silnik :">
+                                      <font>
+                                          <Font size="19.0" />
+                                      </font>
+                                  </Label>
+                                  <Label layoutX="28.0" layoutY="48.0" prefHeight="36.0" prefWidth="150.0" text="Maksymalne obroty :">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                      <padding>
+                                          <Insets bottom="11.0" />
+                                      </padding>
+                                  </Label>
+                                  <Label layoutX="29.0" layoutY="74.0" prefHeight="40.0" prefWidth="162.0" text="Minimalne obroty :">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                      <padding>
+                                          <Insets bottom="11.0" />
+                                      </padding>
+                                  </Label>
+                                  <TextField fx:id="nazwasilnikaTextField" editable="false" layoutX="174.0" layoutY="23.0" prefHeight="25.0" prefWidth="143.0" />
+                                  <TextField fx:id="maxobTextField" editable="false" layoutX="175.0" layoutY="50.0" prefHeight="6.0" prefWidth="141.0" />
+                                  <TextField fx:id="minobTextField" editable="false" layoutX="175.0" layoutY="77.0" prefHeight="25.0" prefWidth="141.0" />
+                                  <Label layoutX="30.0" layoutY="102.0" prefHeight="17.0" prefWidth="100.0" text="Waga :">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                  </Label>
+                                  <TextField fx:id="masasilnikaTextField" editable="false" layoutX="174.0" layoutY="103.0" prefHeight="25.0" prefWidth="142.0" />
+                                  <Label fx:id="stanwlaczenia" layoutX="167.0" layoutY="16.0" />
+                                  <Label layoutX="185.0" layoutY="6.0" />
+                              </children>
+                          </Pane>
+                          <Pane layoutX="-6.0" layoutY="686.0" prefHeight="110.0" prefWidth="543.0">
+                              <children>
+                                  <Button fx:id="wiecejgazuButton" alignment="CENTER" layoutX="16.0" layoutY="35.0" mnemonicParsing="false" onAction="#onZwiekszObroty" prefHeight="65.0" prefWidth="138.0" text="Zwiększ Obroty" textAlignment="CENTER">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                  </Button>
+                                  <Button fx:id="mniejgazuButton" alignment="CENTER" layoutX="180.0" layoutY="35.0" mnemonicParsing="false" onAction="#onZmniejszObroty" prefHeight="65.0" prefWidth="135.0" text="Zmniejsz Obroty" textAlignment="CENTER">
+                                      <font>
+                                          <Font size="15.0" />
+                                      </font>
+                                  </Button>
+                                  <TextField fx:id="AktualneObrotyTextField" editable="false" layoutX="179.0" layoutY="2.0" prefHeight="29.0" prefWidth="141.0" />
+                           <Label layoutX="29.0" layoutY="-11.0" prefHeight="50.0" prefWidth="189.0" text="Aktualne obroty :">
+                               <font>
+                                   <Font size="18.0" />
+                               </font>
+                           </Label>
+                              </children>
+                          </Pane>
+                              <Button fx:id="nacisnijButton" layoutX="69.0" layoutY="530.0" mnemonicParsing="false" onAction="#onNacisnij" prefHeight="25.0" prefWidth="111.0" text="Nacisnij">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                              </Button>
+                              <Button fx:id="zwolnijButton" layoutX="201.0" layoutY="530.0" mnemonicParsing="false" onAction="#onZwolnij" prefHeight="25.0" prefWidth="99.0" text="Zwolnij">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                              </Button>
+                        </children>
+                    </Pane>
+                </items>
+            </SplitPane>
+        </left>
+        <right>
+            <Pane prefHeight="693.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Pane fx:id="mapa" layoutX="-600.0" layoutY="31.0" prefHeight="724.0" prefWidth="941.0" style="-fx-background-color: green;">
+                        <children>
+                            <Label layoutX="3.0" layoutY="5.0" prefHeight="1.0" prefWidth="46.0" style="-fx-background-color: white;" text="Mapa: ">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <ImageView fx:id="CarImageView" fitHeight="70.0" fitWidth="72.0" layoutX="43.0" layoutY="47.0" pickOnBounds="true" />
+                        </children>
+                    </Pane>
+
+                </children>
+            </Pane>
+        </right>
+    </BorderPane>
+
+    <Label fx:id="welcomeText" />
+</VBox>
