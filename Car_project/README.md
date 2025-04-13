@@ -4,7 +4,8 @@ This project is a simulation of car behavior, focusing on core Java programming 
 
 ## Structure
 
-### src/main/
+### src/
+- **main/**
   - **java/**
     - **com/example/demo/**
       - `DodajSamochodController.java`  — Controller for the 'Add Car' view (FXML logic handler)
