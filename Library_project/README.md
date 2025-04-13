@@ -2,7 +2,7 @@
 
 This is a **console-based Java application** designed to manage a digital collection of books. It allows users to add, search, list, and remove books, all handled through a simple terminal interface. The project was developed as part of my learning journey into **object-oriented programming (OOP)**, **data persistence**, and **Java collections**.
 
-## 🛠 What This Project Demonstrates
+##  What This Project Demonstrates
 
 ### Object-Oriented Programming (OOP)
 - Each book is represented by a dedicated `Book` class encapsulating its properties and behavior.
