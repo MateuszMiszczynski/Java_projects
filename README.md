@@ -12,7 +12,7 @@ A simulation application that models car behavior, demonstrating multi-threading
 - Synchronization: Ensures thread-safe operations between different components.
 - Observer Pattern: Implements the observer design pattern to update the UI based on state changes.
 
-### 📚 Library Management System
+### 📚 Library Project
 A console-based application that manages a collection of books, showcasing object-oriented design and data handling.
 
 **Key Features:**
