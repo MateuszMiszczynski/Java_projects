@@ -21,7 +21,7 @@ A console-based application that manages a collection of books, showcasing objec
 - Serialization: Saves and loads library data using Java’s serialization mechanism.
 - Exception Handling: Implements robust error handling for user inputs and file operations.
 
-## 📦 Requirements
+## Requirements
 
 - Java Development Kit (JDK) 17 or later
 - JavaFX SDK (for Car Project GUI)
