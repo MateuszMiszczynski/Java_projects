@@ -1,10 +1,10 @@
-# ☕ Java Projects Repository
+# Java Projects Repository
 
 Welcome to my collection of Java projects! This repository showcases various applications and simulations developed to deepen my understanding of Java programming and object-oriented design. The projects range from GUI-based applications to simulations demonstrating concurrency and design patterns.
 
-## 📂 Projects Included
+## Projects Included
 
-### 🚗 Car Project
+### Car Project
 A simulation application that models car behavior, demonstrating multi-threading and synchronization in Java.
 
 **Key Features:**
@@ -12,7 +12,7 @@ A simulation application that models car behavior, demonstrating multi-threading
 - Synchronization: Ensures thread-safe operations between different components.
 - Observer Pattern: Implements the observer design pattern to update the UI based on state changes.
 
-### 📚 Library Project
+### Library Project
 A console-based application that manages a collection of books, showcasing object-oriented design and data handling.
 
 **Key Features:**
